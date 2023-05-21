@@ -21,9 +21,12 @@ opt.hlsearch = false
 
 -- cursor line
 opt.cursorline = true
+opt.scrolloff = 8
+opt.updatetime = 50
+opt.colorcolumn = "80"
 
 -- appearance
-opt.termguicolors = true
+opt.termguicolors = false 
 opt.background = "dark"
 opt.signcolumn = "yes"
 
@@ -39,9 +42,9 @@ opt.splitbelow = true
 
 -- swap & undo
 opt.iskeyword:append("-")
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME").."/.vim/undodir"
-vim.opt.undofile = true
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME").."/.vim/undodir"
+opt.undofile = true
 
 
