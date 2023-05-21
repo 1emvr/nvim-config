@@ -16,6 +16,8 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.incsearch = true
+opt.hlsearch = false
 
 -- cursor line
 opt.cursorline = true
@@ -35,4 +37,11 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- swap & undo
 opt.iskeyword:append("-")
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME").."/.vim/undodir"
+vim.opt.undofile = true
+
+
