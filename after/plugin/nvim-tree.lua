@@ -1,17 +1,23 @@
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
-    return
-end
-
-vim.g.loaded = 1
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-nvimtree.setup({
-   actions = {
-        open_file = {
-            window_picker = {
-                enable = false
-            },
-        },
-   },
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    width = 50,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
 })

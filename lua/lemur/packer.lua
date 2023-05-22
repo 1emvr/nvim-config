@@ -25,18 +25,26 @@ end
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use( 'wbthomason/packer.nvim' )
-    use( 'ChristianChiarulli/onedark.nvim' )
+    use( 'lourenci/github-colors' )
     use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
     use( 'ThePrimeagen/harpoon' )
-    use( 'mbbill/undotree' )
     use( 'tpope/vim-fugitive' )
     use( 'christoomey/vim-tmux-navigator' )
     use( 'szw/vim-maximizer' )
-    use( 'tpope/vim-surround' )
-    use( 'vim-scripts/ReplaceWithRegister' )
-    use( 'nvim-tree/nvim-tree.lua' )
     use( 'kyazdani42/nvim-web-devicons' )
     use( 'nvim-lualine/lualine.nvim' )
+    use( 'nvim-tree/nvim-tree.lua' )
+    use( 'ThePrimeagen/vim-be-good' )
+    use({
+        "folke/noice.nvim",
+        config = function()
+            require("noice").setup()
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        },
+    })
     use( 
     {
         'nvim-telescope/telescope.nvim', 
@@ -51,7 +59,7 @@ return require('packer').startup(function(use)
             {'neovim/nvim-lspconfig'},
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
-            
+
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},

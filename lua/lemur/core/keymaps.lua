@@ -11,4 +11,4 @@ vim.keymap.set("n", "<leader>sx", ":close<CR>") -- Close current split
 vim.keymap.set("n", "<leader>sz", ":MaximizerToggle<CR>") -- Zoom into split
 -- nvim-tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>o", ":NvimTreeOpen<CR>")
+vim.keymap.set("n", "<leader>o", ":NvimTreeFocus<CR>")

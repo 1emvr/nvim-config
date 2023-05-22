@@ -1,5 +1,5 @@
 function SelectColorScheme(color)
-    color = color or "onedark"
+    color = color or "github-colors"
     vim.cmd.colorscheme(color)
 end
 
